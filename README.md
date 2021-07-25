@@ -5,7 +5,10 @@
 Inspired from all the crosswords and puzzles I work on
 
 ## PROJECT
+
 This project is a well needed help especially when you are worried of loosing the word scrabble game. All that needs to be done is input the game board. It takes up the user input board game into consideration and notifies you with the next better move for you to move forward in the winning path and also provides you with the score you could possibly get if you follow up the move suggested. 
+
+Youtube Link : https://www.youtube.com/watch?v=1TKPeLuYvN0
 
 ## HOW IT'S BUILT
 
