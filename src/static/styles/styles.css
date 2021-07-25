@@ -1,0 +1,274 @@
+/*
+  Author: Elijah Sawyers
+  Email: elijahsawyers@gmail.com
+  Table of Contents:
+  ====================================================================================================
+    1. General Styles.
+    2. Logo.
+    3. Container.
+    4. Rows.
+    5. Game Board.
+    6. Game Board Cell.
+    7. Letter.
+    8. Instructions.
+    9. Letter Dock.
+   10. Score Board.
+*/
+
+/*====================================================================================================
+1. General Styles.
+====================================================================================================*/
+body {
+  background-color:#3c6eaa;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { 
+display: none; 
+}
+
+.col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  box-shadow: none !important;
+}
+
+/*====================================================================================================
+2. Logo.
+====================================================================================================*/
+#logo {
+  display: block;
+  max-width: 300px;
+}
+
+#logo-text {
+  margin: 0;
+  font-weight: bold;
+  font-family: Caveat;
+  margin-top: 8px;
+}
+
+/*====================================================================================================
+3. Container.
+====================================================================================================*/
+#container {
+  height: 100vh;
+}
+
+/*====================================================================================================
+4. Rows.
+====================================================================================================*/
+#top-row {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+#bottom-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 77px;
+}
+
+/*====================================================================================================
+5. Game Board.
+====================================================================================================*/
+#game-board {
+  margin: 0 auto;
+  background: #a2b4c2;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px 1px rgba(0,0,0,0.75);
+}
+
+/*====================================================================================================
+6. Game Board Cell.
+====================================================================================================*/
+.game-board-cell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #dedede;
+  border: 3px solid #c9d3dc;
+  border-radius: 10px;
+  margin: 0.5px;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selected-cell {
+  border: 3px solid #F24C3A !important;
+}
+
+.best-move-cell {
+  border: 3px solid #b166c0 !important;
+}
+
+.start-cell {
+  background: #64284b;
+}
+
+#star {
+  pointer-events: none;
+}
+
+.double-letter {
+  background: #3c82be;
+}
+
+.triple-letter {
+  background: #7da662;
+}
+
+.double-word {
+  background: #a04b3c;
+}
+
+.triple-word {
+  background: #d79650;
+}
+
+/*====================================================================================================
+7. Letter.
+====================================================================================================*/
+.letter {
+  background: #F0D755;
+  font-size: 25px;
+  border: 3px solid #DCC653;
+}
+
+.letter-point-value {
+  pointer-events: none;
+  font-size: 10px;
+  position: absolute;
+  top: -10px;
+  right: 2px;
+}
+
+/*====================================================================================================
+8. Instructions.
+====================================================================================================*/
+#instructions {
+  width: 300px;
+  height: 645px;
+  padding: 20px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px 1px rgba(0,0,0,0.75);
+}
+
+/*====================================================================================================
+9. Letter Dock.
+====================================================================================================*/
+#letter-dock-container {
+  width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px 1px rgba(0,0,0,0.75);
+}
+
+#letter-dock {
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-letter {
+  height: 75px;
+  width: 75px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 48px;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-letter-point-value {
+  pointer-events: none;
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+
+#go, #clear {
+  width: 150px;
+  border-radius: 0 0 10px 0;
+  height: 50px;
+}
+
+#clear {
+  float: left;
+  border-radius: 0 0 0 10px;
+}
+
+/*====================================================================================================
+10. Score Board.
+====================================================================================================*/
+#score-board-container {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px 1px rgba(0,0,0,0.75);
+  align-self: flex-start;
+}
+
+#score-header {
+  width: 300px;
+  height: 50px;
+  padding-top: 5px;
+  text-align: center;
+  background: #343a40;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+}
+
+#score-header h1 {
+  font-size: 82px;
+  padding: 0 25px;
+}
+
+#score-value-container {
+  height: 100px;
+}
+
+#score-value {
+  font-size: 82px;
+  text-align: right;
+  padding: 0 25px;
+}
+
+#discard {
+  width: 150px;
+  float: left;
+  border-radius: 0 0 0 10px;
+  height: 50px;
+}
+
+#keep {
+  width: 150px;
+  border-radius: 0 0 10px 0;
+  height: 50px;
+}
